@@ -189,11 +189,30 @@ public class Ejercicio3 {
         }
     }
 
+    public static void sacarDePilaAlReves(Pila pila) {
+        if (!pila.sinElementos()) {
+            int elemento = pila.pafuera();
+            sacarDePilaAlReves(pila);
+            System.out.println(elemento);
+        }
+    }
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Pila pila = new Pila();
 
+        System.out.println("Para finalizar la lista ponga -69:");
+        while (true) {
+            int elemento = entrada.nextInt();
+            if (elemento == -69) {
+                break;
+            }
+            pila.padentro(elemento);
+        }
+
+        System.out.println("Elementos de la pila al reves (o sea en el orden en que ingresaron, pero"
+                + "al reves de como se guardaron):");
+        sacarDePilaAlReves(pila);
     }
 }
 
