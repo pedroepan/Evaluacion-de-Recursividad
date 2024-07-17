@@ -34,7 +34,8 @@ public class EvaluacionRecursividad {
 }
 
 /*
-public class Ejercicio4 {
+//Ejercicio 4
+public class EvaluacionRecursividad {
     
     
     public static long potencia(int base, int exponente) {
@@ -74,5 +75,72 @@ public class Ejercicio4 {
 */
 
 /*
+public class Ejercicio2 {
 
+    static class Nodo {
+        String dato;
+        Nodo siguiente;
+
+        Nodo(String dato) {
+            this.dato = dato;
+            this.siguiente = null;
+        }
+    }
+
+    static class Lista {
+        private Nodo tope;
+
+        public Lista() {
+            tope = null;
+        }
+
+        public void nuevo(String elemento) {
+            Nodo nuevo = new Nodo(elemento);
+            if (tope == null) {
+                tope = nuevo;
+                nuevo.siguiente = tope;
+            } else {
+                Nodo temp = tope;
+                while (temp.siguiente != tope) {
+                    temp = temp.siguiente;
+                }
+                temp.siguiente = nuevo;
+                nuevo.siguiente = tope;
+            }
+        }
+
+        public String concatenarElementos(Nodo nodo, Nodo inicio, boolean primer) {
+            if (nodo == null || (nodo == inicio && !primer)) {
+                return "";
+            }
+            String espacio = " ";
+            
+            String cadenaFinalDeElementos = concatenarElementos(nodo.siguiente, inicio, false);
+            if (primer) {
+                return nodo.dato + espacio + cadenaFinalDeElementos;
+            } else {
+                return nodo.dato + espacio + cadenaFinalDeElementos;
+            }
+        }
+
+        public String concatenar() {
+            if (tope == null) return "";
+            return concatenarElementos(tope, tope, true);
+        }
+    }
+
+    public static void main(String[] args) {
+        Lista lista = new Lista();
+        lista.nuevo("the");
+        lista.nuevo("one");
+        lista.nuevo("piece");
+        lista.nuevo("is");
+        lista.nuevo("real");
+        lista.nuevo("!");
+        lista.nuevo("!");
+
+        String cadenaFinalDeElementos = lista.concatenar();
+        System.out.println("Cadena concatenada: " + cadenaFinalDeElementos);
+    }
+}
 */
