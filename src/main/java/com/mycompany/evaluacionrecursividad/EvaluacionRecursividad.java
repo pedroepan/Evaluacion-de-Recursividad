@@ -4,6 +4,8 @@ package com.mycompany.evaluacionrecursividad;
 import java.util.Scanner;
 
 public class EvaluacionRecursividad {
+    
+    //Ejercicio1
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
        
@@ -30,3 +32,7 @@ public class EvaluacionRecursividad {
         return arreglo[indice] + sumarElementosArreglo(arreglo, indice - 1);
     }
 }
+
+/*
+
+*/
