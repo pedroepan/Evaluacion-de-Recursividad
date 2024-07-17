@@ -75,7 +75,8 @@ public class EvaluacionRecursividad {
 */
 
 /*
-public class Ejercicio2 {
+//Ejercicio 2
+public class EvaluacionRecursividad {
 
     static class Nodo {
         String dato;
@@ -143,4 +144,57 @@ public class Ejercicio2 {
         System.out.println("Cadena concatenada: " + cadenaFinalDeElementos);
     }
 }
+*/
+
+/*
+//Ejercicio 3
+public class Ejercicio3 {
+    //Solo se pueden ingresar numeros en la pila
+
+    static class Nodo {
+        int dato;
+        Nodo siguiente;
+
+        Nodo(int elemento) {
+            this.dato = elemento;
+            this.siguiente = null;
+        }
+    }
+
+    static class Pila {
+        private Nodo tope;
+
+        public Pila() {
+            this.tope = null;
+        }
+
+        public int pafuera() {
+            if (tope == null) {
+                System.out.println("Pila vacia.");
+                return 0;
+            }
+            int elemento = tope.dato;
+            tope = tope.siguiente;
+            return elemento;
+        }
+        
+        public void padentro(int elemento) {
+            Nodo nuevo = new Nodo(elemento);
+            nuevo.siguiente = tope;
+            tope = nuevo;
+        }
+
+        public boolean sinElementos() {
+            return tope == null;
+        }
+    }
+
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        Pila pila = new Pila();
+
+    }
+}
+
 */
